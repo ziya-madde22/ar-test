@@ -16,7 +16,6 @@
 	</a-marker>
 	<a-entity camera />
 </a-scene>
-<section />
 
 <style>
 </style>

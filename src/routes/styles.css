@@ -1,1 +1,6 @@
 @import '@fontsource/fira-mono';
+
+body {
+	margin: 0px;
+	overflow: hidden;
+}
