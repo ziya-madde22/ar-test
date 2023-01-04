@@ -15,7 +15,6 @@
           rotation="90 90 -90"
           scale="2 2 2"
           gltf-model="/models/crystal-model.gltf"
-          animation-mixer
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
@@ -24,9 +23,13 @@
   <script>
     // handle marker found
     document.querySelector("a-marker").addEventListener("markerFound", () => {
-      // Start animation when marker is found
-      const an = document.querySelector("a-entity");
-      console.log(a);
+      //Add animation to the entity rotating it 360 degrees
+      document.querySelector("a-entity").setAttribute("animation", {
+        property: "rotation",
+        to: "360 90 -90",
+        loop: true,
+        dur: 10000,
+      });
     });
   </script>
 </html>
