@@ -27,7 +27,7 @@
 
 <svelte:head>
 	{#if mounted}
-		<script src="https://aframe.io/releases/1.0.0/aframe.min.js" on:load={aframeLoaded}></script>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js" on:load={aframeLoaded}></script>
 		<script
 			src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"
 			on:load={arLoaded}
@@ -38,7 +38,7 @@
 {#if ready}
 	<a-scene embedded arjs>
 		<a-marker preset="hiro">
-			<a-entity position="0 0 0" scale="1 1 1" gltf-model="/models/crystal-model.gltf" />
+			<a-entity position="0 -1 0" scale="0.05 0.05 0.05" gltf-model="/models/crystal-model.gltf" />
 		</a-marker>
 		<a-entity camera />
 	</a-scene>
